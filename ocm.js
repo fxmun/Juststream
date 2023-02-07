@@ -292,21 +292,22 @@ function openModale(matching, premierFilm){
     }
     
     const resume = [];
-    resume.push(result.image_url);
-    resume.push(result.title);
-    resume.push(result.genres);
-    resume.push(result.date_published);
-    resume.push(result.rated);
-    resume.push(result.imdb_score);
-    resume.push(result.directors);
-    resume.push(result.actors);
-    resume.push(result.duration);
-    resume.push(result.countries);
-    resume.push(result.votes);
-    resume.push(result.description);
+    resume.push("Url de l'image: "+result.image_url);
+    resume.push("Titre: "+result.title);
+    resume.push("Genre complet: "+result.genres);
+    resume.push("Date de sortie: "+result.date_published);
+    resume.push("Evaluation: "+result.rated);
+    resume.push("Score Imdb: "+result.imdb_score);
+    resume.push("Réalisateur: "+result.directors);
+    resume.push("Liste des acteurs: "+result.actors);
+    resume.push("Durée: "+result.duration);
+    resume.push("Pays d’origine: "+result.countries);
+    resume.push("Résultat au Box Office: "+result.votes);
+    resume.push("Résumé: "+result.description);
     let popup = window.open("about:blank", "resume", "width=1100,height=238,left=795,top=112");
     for (let x = 0; x < resume.length; x++){
         popup.document.write(resume[x], "<br/>");
     }
+    open (result.image_url);
     return resume;
 }
