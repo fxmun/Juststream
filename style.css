@@ -34,20 +34,22 @@ header {
     left: 60%;
 }
 
+.best_img {}
+
 .best_movie {
     display: inline;
     color: #ffffff;
     position: absolute;
-    top: 35%;
-    left: 20%; 
+    top: 38%;
+    left:16%; 
 }
 
 .title_movie {
     display: inline;
     color: hsl(69, 100%, 60%);
     position: absolute;
-    top: -5%;
-    left:10%;
+    top: -8%;
+    left:10.5%;
 }
 
 .play {
@@ -57,17 +59,88 @@ header {
     border-radius: 10%;
     position: absolute;
     top: 15%;
-    left: 10%;
+    left: 10.5%;
+}
+
+.other_img {
+    display: inline;
 }
 
 .other_movie {
     display: inline;
+    width: 400px;
     color: #ffffff;
     position: absolute;
-    left: 78%;
-    top: 35%; 
+    text-align: left;
 }
 
 div {
     position: relative;
+}
+
+.best_all_movies {
+    margin-left: 0.5%;
+    margin-top: 1%;
+    margin-right: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+.best_all_7_movies {
+    display: inline-block;
+    width: 38.2%;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 0.5%;
+}
+
+.best_all_7_movies_titre {
+    display: inline-block;
+    position: absolute;
+    top: 89%;
+    left: 44.7%;
+}
+
+.best_action_7_movies {
+    display: inline-block;
+    width: 38.2%;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 0.5%;
+}
+
+.best_action_7_movies_titre {
+    display: inline-block;
+    position: absolute;
+    top: 149%;
+    left: 44.7%;
+}
+
+.best_comedy_7_movies {
+    display: inline-block;
+    width: 38.2%;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 0.5%;
+}
+
+.best_comedy_7_movies_titre {
+    display: inline-block;
+    position: absolute;
+    top: 209%;
+    left: 44.7%;
+}
+
+.best_fantasy_7_movies {
+    display: inline-block;
+    width: 38.2%;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 0.5%;
+}
+
+.best_fantasy_7_movies_titre {
+    display: inline-block;
+    position: absolute;
+    top: 269%;
+    left: 44.7%;
 }

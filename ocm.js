@@ -79,7 +79,7 @@ function genereFilmsOrdre(selectFilms){
 }
 
 const premierFilm = genereFilmsOrdre(selectFilms);
-//console.log(premierFilm);
+console.log(premierFilm);
 
 // Récupération de l'élément du DOM qui accueilleront le meilleur film
 const divMeilleurFilm = selectDom(".best_all_movies");
@@ -113,6 +113,7 @@ let best7GlobalMovies = [];
 for (let h = 0; h < 7; h ++){
     best7GlobalMovies.push(premierFilm[h]);
     var div7MeilleurFilm = selectDom(".best_all_7_movies");
+    var div7MeilleurFilmTitre = selectDom(".best_all_7_movies_titre");
     const imageElement_1 = createDom("img");
     imageElement_1.id = "img_1-"+ h;
     imageElement_1.src = best7GlobalMovies[h].image_url;
@@ -124,7 +125,7 @@ for (let h = 0; h < 7; h ++){
 const _7_Best = createDom("h2");
 _7_Best.classList.add("other_movie");
 _7_Best.innerText = "Films les mieux notés";
-appendDom(div7MeilleurFilm, _7_Best);
+appendDom(div7MeilleurFilmTitre, _7_Best);
 //console.log(best7GlobalMovies);
 
 //Tri de tous les films par genre
@@ -156,6 +157,7 @@ let best7ActionMovies = [];
 for (let h = 0; h < 7; h ++){
     best7ActionMovies.push(triGenre_1[h]);
     var div7ActionFilm = selectDom(".best_action_7_movies");
+    var div7ActionFilmTitre = selectDom(".best_action_7_movies_titre");
     const imageElement_2 = createDom("img");
     imageElement_2.id = "img_2-"+ h;
     imageElement_2.src = best7ActionMovies[h].image_url;
@@ -168,7 +170,7 @@ for (let h = 0; h < 7; h ++){
 const _7_Action = createDom("h2");
 _7_Action.classList.add("other_movie");
 _7_Action.innerText = "Films d'action les mieux notés";
-appendDom(div7ActionFilm, _7_Action);
+appendDom(div7ActionFilmTitre, _7_Action);
 //console.log(best7ActionMovies);
 
 //Selection et intégration des sept meilleurs films de comédie
@@ -176,6 +178,7 @@ let best7ComedieMovies = [];
 for (let h = 0; h < 7; h ++){
     best7ComedieMovies.push(triGenre_2[h]);
     var div7ComedieFilm = selectDom(".best_comedy_7_movies");
+    var div7ComedieFilmTitre = selectDom(".best_comedy_7_movies_titre");
     const imageElement_3 = createDom("img");
     imageElement_3.id = "img_3-"+ h;
     imageElement_3.src = best7ComedieMovies[h].image_url;
@@ -188,7 +191,7 @@ for (let h = 0; h < 7; h ++){
 const _7_Comedie = createDom("h2");
 _7_Comedie.classList.add("other_movie");
 _7_Comedie.innerText = "Films de comédie les mieux notés";
-appendDom(div7ComedieFilm, _7_Comedie);
+appendDom(div7ComedieFilmTitre, _7_Comedie);
 //console.log(best7ComedieMovies);
 
 //Selection et intégration des sept meilleurs films de fantaisie
@@ -196,6 +199,7 @@ let best7FantaisieMovies = [];
 for (let h = 0; h < 7; h ++){
     best7FantaisieMovies.push(triGenre_3[h]);
     var div7FantaisieFilm = selectDom(".best_fantasy_7_movies");
+    var div7FantaisieFilmTitre = selectDom(".best_fantasy_7_movies_titre");
     const imageElement_4 = createDom("img");
     imageElement_4.id = "img_4-"+ h;
     imageElement_4.src = best7FantaisieMovies[h].image_url;
@@ -208,7 +212,7 @@ for (let h = 0; h < 7; h ++){
 const _7_Fantaisie = createDom("h2");
 _7_Fantaisie.classList.add("other_movie");
 _7_Fantaisie.innerText = "Films de fantaisie les mieux notés";
-appendDom(div7FantaisieFilm, _7_Fantaisie);
+appendDom(div7FantaisieFilmTitre, _7_Fantaisie);
 //console.log(best7FantaisieMovies);
 
 var identify = document.getElementsByTagName("img");
@@ -308,6 +312,5 @@ function openModale(matching, premierFilm){
     for (let x = 0; x < resume.length; x++){
         popup.document.write(resume[x], "<br/>");
     }
-    open (result.image_url);
     return resume;
 }
