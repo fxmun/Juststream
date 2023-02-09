@@ -55,7 +55,7 @@ async function main(init){
             description = caracterise[i].description;
           }
           nbPage += 1;
-          if (urlNextPage === "http://localhost:8000/api/v1/titles/?page=51"){
+          if (urlNextPage === "http://localhost:8000/api/v1/titles/?page=5000"){
             break
         }
     }
